@@ -1,0 +1,259 @@
+/* 20190102 vant组件基础样式修改 wendy */
+/* 基本样式 */
+html{
+    font-size:100px;
+}
+ul,li{
+    list-style: none;
+    padding:0;
+    margin: 0;
+}
+h3{
+    margin:0.2rem 0;
+}
+a{
+    text-decoration: none;
+}
+img{
+    width:100%;
+    height: 100%;
+    object-fit: contain;
+    vertical-align: baseline;
+}
+input{
+  padding:0;
+    margin:0;
+    outline: none;
+    border: none;
+    -webkit-appearance:none;
+}
+textarea{
+    padding:0;
+    margin:0;
+    outline: none;
+    border: none;
+    width: 100%;
+}
+[v-cloak]{
+    display: none;
+}
+/* popup组件 */
+.van-overlay{
+    background-color: rgba(2,18,49,0.6);
+}
+.van-popup{
+    width: 100%;
+    overflow-x: hidden;
+    background-color: transparent;
+    -webkit-overflow-scrolling: touch;
+    overflow-y: auto;
+}
+.van-popup--bottom.van-popup--round{
+    border-radius: 0.4rem 0.4rem 0 0
+}
+/* toast 样式 */
+.van-toast{
+    font-family: SFUIDisplay-Regular;
+    padding:0.3rem;
+    background-color: rgba(0,0,0,0.9);
+    border-radius: 0.2rem;
+    max-width: 100%;
+    font-weight: 300;
+}
+/* tab导航样式 */
+.van-tab{
+    font-family: SFUIDisplay-Medium;
+}
+.van-tabs--line .van-tabs__wrap{
+    height: 0.8rem;
+}
+/* list组件 cell组件样式 */
+.van-cell:not(:last-child)::after{
+    left:0;
+}
+.van-list__finished-text,.van-list__loading{
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color:rgb(176,177,185);
+}
+.van-list__finished-text{
+    height: 1.2rem;
+    height: calc(1.2rem + constant(safe-area-inset-bottom));
+    height: calc(1.2rem + env(safe-area-inset-bottom));
+    font-size: 0.24rem;
+}
+/* dialog组件样式  */
+.van-dialog{
+    border-radius: 0.2rem!important;
+}
+.van-dialog__header{
+    font-family: SFUIDisplay-Medium;
+    font-size:0.3rem;
+    color: rgb(102,102,102);
+}
+.van-dialog__message{
+    font-family: SFUIDisplay-Medium;
+    font-size: 0.3rem;
+    color: rgb(102,102,102);
+    font-weight: 200;
+}
+.van-dialog .van-button,.van-dialog .van-button{
+    height: 1.1rem;
+    font-family: SFUIDisplay-Medium;
+    font-size: 0.32rem;
+    color:rgb(23,101,255);
+}
+.morePadding .van-dialog__header{
+    font-size:0.3rem;
+    color: rgb(66,93,144);
+}
+.morePadding .van-dialog__message{
+    padding: 1rem .5rem;
+    font-size: 0.3rem;
+    color: rgb(66,93,144);
+    font-weight: 200;
+}
+.lessPadding .van-dialog__header{
+    font-size:0.32rem;
+    color: rgb(102,102,102);
+}
+.lessPadding .van-dialog__message{
+    color: rgb(153,153,153);
+    padding:0.2rem 0.5rem;
+    font-size: 0.28rem;
+}
+/* 顶部导航样式 */
+.van-nav-bar__title{
+    font-family: SFUIDisplay-Medium;
+    color:rgb(102,102,102);
+    font-size: 0.4rem;
+}
+.van-nav-bar__left, .van-nav-bar__right{
+    font-size: 0.28rem;
+}
+.van-nav-bar__left .van-nav-bar__text{
+    color: rgb(54,101,167);
+}
+.van-nav-bar--fixed{
+    z-index: 10!important;
+}
+.active .van-nav-bar__right .van-nav-bar__text{
+    color: rgb(54,101,167);
+}
+.van-nav-bar__right .van-nav-bar__text{
+    color: rgb(130,167,208,.6);
+}
+.van-nav-bar__text:active{
+    background-color: transparent;
+}
+/* 侧滑删除按钮 */
+.van-swipe-cell__right{
+    width: 1rem;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 公共样式 */
+.clearfix::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+/* mapbox marker样式*/
+a.mapboxgl-ctrl-logo,.mapboxgl-ctrl-bottom-right{
+    display: none;
+}
+/* swiper */
+.van-swipe {
+    position: absolute!important;
+    width: 100%;
+    height: 100%;
+}
+.van-swipe__track{
+    display: flex;
+    align-items: center;
+}
+
+/* 上传头像UI cropper */
+.cropper-profile-icon .cropper-crop-box{
+    border-radius:100%;
+    overflow:hidden;
+}
+/* van-image */
+.van-image{
+    width: 100%;
+    height: 100%;
+}
+.van-image__error,.van-image__loading{
+    background-color: transparent
+}
+
+/* animation */
+@keyframes likeAnim{
+    0%{
+      transform:scale(1) rotate(-30deg)
+    }
+    40%{
+      transform:scale(1.3) rotate(30deg)
+    }
+    100%{
+      transform:scale(1) rotate(0)
+    }
+}
+/* iconfont样式 */
+@font-face {
+    font-family: 'iconfont';
+    src: url('../fonts/iconfont/iconfont.eot');
+    src: url('../fonts/iconfont/iconfont.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/iconfont/iconfont.woff2') format('woff2'),
+        url('../fonts/iconfont/iconfont.woff') format('woff'),
+        url('../fonts/iconfont/iconfont.ttf') format('truetype'),
+        url('../fonts/iconfont/iconfont.svg#iconfont') format('svg')
+        ;
+    font-style: normal;
+    font-weight: normal;
+}
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 0.32rem;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+   /* SFUIDisplay-Regular */
+@font-face {
+    font-family: 'SFUIDisplay-Regular';
+    src: url('../fonts/SFUIDisplay-Regular/SFUIDisplay-Regular.woff');
+    font-style: normal;
+    font-weight: normal;
+}
+    /* SFUIDisplay-Medium */
+@font-face {
+    font-family: 'SFUIDisplay-Medium';
+    src: url('../fonts/SFUIDisplay-Medium/SFUIDisplay-Medium.woff');
+    font-style: normal;
+    font-weight: normal;
+}
+
+    /* SFUIDisplay-Medium */
+@font-face {
+    font-family: 'SFUIDisplay-Semibold';
+    src: url('../fonts/SFUIDisplay-Semibold/SFUIDisplay-Semibold.woff');
+    font-style: normal;
+    font-weight: normal;
+}
+
+@media(min-width:640px){ html { font-size: 60px; } }
+@media(max-width:640px){ html { font-size:85.33px; } }  /*Android常用宽度*/
+@media(max-width:540px){ html { font-size:72px; } }     /*Android常用宽度*/
+@media(max-width:480px){ html { font-size:64px; } }     /*Android常用宽度*/
+@media(max-width:445px){ html { font-size:60px; } }
+@media(max-width:414px){ html { font-size:55.2px; } }   /*i6Plus,i7Plus宽度*/
+@media(max-width:375px){ html { font-size:50px; } }     /*i6,i7宽度*/
+@media(max-width:360px){ html { font-size:48px; } }     /*Android常用宽度*/
+@media(max-width:320px){ html { font-size:42.67px; } }    /*i5宽度*/

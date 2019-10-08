@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=0, viewport-fit=cover">
+  <meta name="keywords" content="XPLO">
+  <meta name="description" content="XPLO is the most immersive platform to discover the world and share your moments.
+   With the world now at your fingertips you can explore anywhere anytime. A Simple Way to Explore">
+  <title>Welcome to XPLO</title>  
+  <meta name="referrer" content="no-referrer" />
+  <meta name="robots" content="noimageindex, noarchive"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+  <meta name="mobile-web-app-capable" content="yes"/>
+  <meta name="theme-color" content="#ffffff"/>
+  <meta http-equiv="Cache-Control" content="public" max-age=31536000/>
+  <!-- 是否启用 WebApp 全屏模式默认no -->
+  <meta name="apple-touch-fullscreen" content="yes"/>
+  <meta name='apple-mobile-web-app-capable' content='yes'/>
+  <meta name='full-screen' content='true' />
+  <meta name='x5-fullscreen' content='true' />
+  <meta name='360-fullscreen' content='true' />
+  <meta content="telephone=no" name="format-detection"/>
+  <meta content="email=no" name="format-detection"/>
+  <meta name="description" content="XPLO -- Open the APP to explore the world..."/>
+  <link rel="manifest" href="static/json/manifest.json">
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="static/images/icon/xplo_icon_76x76.png">
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="static/images/icon/xplo_icon_120x120.png">
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="static/images/icon/xplo_icon_152x152.png">
+  <link rel="apple-touch-icon-precomposed" sizes="167x167" href="static/images/icon/xplo_icon_167x167.png">
+  <link rel="apple-touch-icon-precomposed" sizes="180x180" href="static/images/icon/xplo_icon_180x180.png">
+  <link rel="icon" sizes="192x192" href="static/images/icon/xplo_icon_192x192.png">
+  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v1.3.1/mapbox-gl.css' rel='stylesheet'>
+  <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+  <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v1.3.1/mapbox-gl.js'></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bodymovin/5.5.7/lottie.min.js"></script>
+  
+  <style>
+    html,
+    body,
+    #app {
+      padding: 0;
+      margin: 0;
+      width: 100%;
+      height: 100%;
+    }
+    .first_loading{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .first_loading img{
+      width: 60px;
+      height: auto;
+    }
+    .rotate{
+      animation: rotate 3s ease infinite;
+    }
+    @keyframes rotate{
+      0%{
+        transform: rotate(0)
+      }
+      25%{
+        transform: rotate(90deg)
+      }
+      50%{
+        transform: rotate(180deg)
+      }
+      75%{
+        transform: rotate(270deg)
+      }
+      100%{
+        transform: rotate(360deg)
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div id="app">
+    <!-- 首屏展示 -->
+    <div class="first_loading">
+      <img class="rotate" src="static/images/icon/xplo_icon_76x76.png" alt="XPLO">
+    </div>
+  </div>
+
+  <script>
+    //移动端正常展示，电脑端展示官网
+    const app = document.getElementById('app')
+    const ua = window.navigator.userAgent.toLocaleLowerCase()
+    if (!ua.includes('mobile')) {
+      window.location.href = 'https://www.xploers.com'
+    }
+    //保证输入框相关控件总是显示在可视范围内
+    window.addEventListener('resize', () => {
+      if (document.activeElement.tagName == 'INPUT' || document.activeElement.tagName == 'TEXTAREA') {
+        document.activeElement.scrollIntoView(false);
+      }
+    })
+  </script>
+</body>
+
+</html>

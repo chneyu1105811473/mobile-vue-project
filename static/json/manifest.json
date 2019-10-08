@@ -1,0 +1,26 @@
+{
+  "name": "XPLO H5 APP",
+  "short_name": "XPLO",
+  "description": "Start from here,and explore the world!",
+  "start_url": "/web/?version=2.1",
+  "scope":"/web/",
+  "orientation": "portrait",
+  "display": "standalone",
+  "background_color": "#fff",
+  "theme_color": "#fff",
+  "prompt_message": "\u5728\u4e3b\u5c4f\u5e55\u6dfb\u52a0\u56fe\u6807\uff0c\u4ee5\u4fbf\u5feb\u901f\u8bbf\u95ee XPLO",
+  "icons": [{
+    "src": "../images/icon/xplo_icon_144x144.png",
+    "sizes": "144x144",
+    "type": "image/png"
+  }, {
+    "src": "../images/icon/xplo_icon_192x192.png",
+    "sizes": "192x192",
+    "type": "image/png"
+  }],
+  "prefer_related_applications": true,
+  "related_applications": [{
+    "platform": "itunes",
+    "url": "https://itunes.apple.com/app/id1449233544?mt=8"
+  }]
+}
